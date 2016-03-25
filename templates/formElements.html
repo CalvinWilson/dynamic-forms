@@ -1,0 +1,27 @@
+<div id="header">
+	<span> Sign up for my web app </span>
+</div>
+<div id="forms">
+{{#data}}
+	<p>
+	<i class="fa {{icon}}"></i>
+	{{#select}}
+		<select class="select-style" name="country">
+			<option value="{{value}}">{{label}}</option>
+			{{#options}}
+			<option value="{{value}}">{{label}}</option>
+			{{/options}}
+			</select>
+	{{/select}}
+	{{#textarea}}
+		<textarea placeholder="{{label}}" ></textarea>
+	{{/textarea}}
+	{{#input}}
+		<input id="{{id}}" type="{{type}}" placeholder="{{label}}">
+	{{/input}}
+	</p>
+{{/data}}
+</div>
+<div id="footer">
+	<button>Submit</button>
+</div>
